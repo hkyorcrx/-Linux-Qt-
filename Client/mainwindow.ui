@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>620</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>301</width>
+      <height>102</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="1">
+      <widget class="QLabel" name="name_label">
+       <property name="styleSheet">
+        <string notr="true"> QLabel {
+        font-family: &quot;微软雅黑&quot;, &quot;PingFang SC&quot;, &quot;Source Han Sans CN&quot;, sans-serif; 
+        font-size: 20px;
+        font-weight: 700; 
+        color: #222222; 
+		padding-left: 8px;
+    }</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::NoFrame</enum>
+       </property>
+       <property name="text">
+        <string>username</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" rowspan="2">
+      <widget class="QLabel" name="img_label">
+       <property name="minimumSize">
+        <size>
+         <width>90</width>
+         <height>90</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>90</width>
+         <height>90</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QToolButton" name="rename_Button">
+       <property name="styleSheet">
+        <string notr="true">    QToolButton {
+        border: none; /* 无默认边框 */
+        background-color: transparent; /* 透明背景 */
+    }
+    QToolButton:hover {
+        background-color: rgba(255, 255, 255, 0.3); /* 鼠标悬浮时轻微高亮 */
+        border-radius: 3px; /* 圆角，更柔和 */
+    }</string>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1" colspan="2">
+      <widget class="QLabel" name="person_signature_label">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+		color: rgb(157, 255, 0);
+        font-family: &quot;新宋体&quot;, &quot;PingFang SC&quot;, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        background: linear-gradient(45deg, #FF9A9E, #FAD0C4, #FECFEF, #E0C3FC);
+        /* 圆角，避免生硬 */
+        border-radius: 8px;
+        /* 内边距，让文字和背景有间距 */
+        padding: 2px 8px;
+        /* 轻微阴影，提升立体感 */
+        border: 1px solid rgba(255, 255, 255, 0.5);
+    }</string>
+       </property>
+       <property name="text">
+        <string>person singature</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="up_widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>801</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(25, 201, 255);</string>
+    </property>
+    <widget class="QWidget" name="horizontalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>130</y>
+       <width>231</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QToolButton" name="sendfile_Button">
+        <property name="styleSheet">
+         <string notr="true">    QToolButton {
+        border: none; /* 无默认边框 */
+        background-color: transparent; /* 透明背景 */
+    }
+    QToolButton:hover {
+        background-color: rgba(255, 255, 255, 0.3); /* 鼠标悬浮时轻微高亮 */
+        border-radius: 3px; /* 圆角，更柔和 */
+    }</string>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="saying_Button">
+        <property name="styleSheet">
+         <string notr="true">    QToolButton {
+        border: none; /* 无默认边框 */
+        background-color: transparent; /* 透明背景 */
+    }
+    QToolButton:hover {
+        background-color: rgba(255, 255, 255, 0.3); /* 鼠标悬浮时轻微高亮 */
+        border-radius: 3px; /* 圆角，更柔和 */
+    }</string>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="remote_Button">
+        <property name="styleSheet">
+         <string notr="true">    QToolButton {
+        border: none; /* 无默认边框 */
+        background-color: transparent; /* 透明背景 */
+    }
+    QToolButton:hover {
+        background-color: rgba(255, 255, 255, 0.3); /* 鼠标悬浮时轻微高亮 */
+        border-radius: 3px; /* 圆角，更柔和 */
+    }</string>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="design_Button">
+        <property name="styleSheet">
+         <string notr="true">    QToolButton {
+        border: none; /* 无默认边框 */
+        background-color: transparent; /* 透明背景 */
+    }
+    QToolButton:hover {
+        background-color: rgba(255, 255, 255, 0.3); /* 鼠标悬浮时轻微高亮 */
+        border-radius: 3px; /* 圆角，更柔和 */
+    }</string>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="addmessage_Button">
+        <property name="styleSheet">
+         <string notr="true">    QToolButton {
+        border: none; /* 无默认边框 */
+        background-color: transparent; /* 透明背景 */
+    }
+    QToolButton:hover {
+        background-color: rgba(255, 255, 255, 0.3); /* 鼠标悬浮时轻微高亮 */
+        border-radius: 3px; /* 圆角，更柔和 */
+    }</string>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>20</y>
+       <width>371</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QScrollArea" name="scrollArea">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>170</y>
+      <width>531</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QScrollArea { border: none; background-color: white; }</string>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>531</width>
+       <height>291</height>
+      </rect>
+     </property>
+     <widget class="QWidget" name="chat_widget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>531</width>
+        <height>291</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <widget class="QWidget" name="verticalLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>0</y>
+         <width>511</width>
+         <height>291</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="chat_VLayout"/>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>580</y>
+      <width>801</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(221, 255, 250);</string>
+    </property>
+    <widget class="QPushButton" name="shift_Button">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>-3</y>
+       <width>93</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton::pressed,QPushButton::checked
+{&quot;
+        &quot;color: #FFFFFF;&quot;
+        &quot;background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #273c75, stop:1 #487eb0);&quot;
+    &quot;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>关闭</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="send_Button">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>-3</y>
+       <width>93</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton::pressed,QPushButton::checked
+{&quot;
+        &quot;color: #FFFFFF;&quot;
+        &quot;background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #273c75, stop:1 #487eb0);&quot;
+    &quot;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>发送</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget_2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>460</y>
+      <width>531</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="widget_3" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>531</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(176, 227, 255);</string>
+     </property>
+     <widget class="QWidget" name="horizontalLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QToolButton" name="font_Button">
+         <property name="styleSheet">
+          <string notr="true">    QToolButton {
+        border: none; /* 无默认边框 */
+        background-color: transparent; /* 透明背景 */
+    }
+    QToolButton:hover {
+        background-color: rgba(255, 255, 255, 0.3); /* 鼠标悬浮时轻微高亮 */
+        border-radius: 3px; /* 圆角，更柔和 */
+    }</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="face_Button">
+         <property name="styleSheet">
+          <string notr="true">    QToolButton {
+        border: none; /* 无默认边框 */
+        background-color: transparent; /* 透明背景 */
+    }
+    QToolButton:hover {
+        background-color: rgba(255, 255, 255, 0.3); /* 鼠标悬浮时轻微高亮 */
+        border-radius: 3px; /* 圆角，更柔和 */
+    }</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="picture_Button">
+         <property name="styleSheet">
+          <string notr="true">    QToolButton {
+        border: none; /* 无默认边框 */
+        background-color: transparent; /* 透明背景 */
+    }
+    QToolButton:hover {
+        background-color: rgba(255, 255, 255, 0.3); /* 鼠标悬浮时轻微高亮 */
+        border-radius: 3px; /* 圆角，更柔和 */
+    }</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="message_Button">
+         <property name="styleSheet">
+          <string notr="true">    QToolButton {
+        border: none; /* 无默认边框 */
+        background-color: transparent; /* 透明背景 */
+    }
+    QToolButton:hover {
+        background-color: rgba(255, 255, 255, 0.3); /* 鼠标悬浮时轻微高亮 */
+        border-radius: 3px; /* 圆角，更柔和 */
+    }</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="reconnect_Button">
+         <property name="styleSheet">
+          <string notr="true">    QToolButton {
+        border: none; /* 无默认边框 */
+        background-color: transparent; /* 透明背景 */
+    }
+    QToolButton:hover {
+        background-color: rgba(255, 255, 255, 0.3); /* 鼠标悬浮时轻微高亮 */
+        border-radius: 3px; /* 圆角，更柔和 */
+    }</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QTextEdit" name="input_Edit">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>30</y>
+       <width>531</width>
+       <height>101</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget_4" native="true">
+    <property name="geometry">
+     <rect>
+      <x>529</x>
+      <y>169</y>
+      <width>271</width>
+      <height>421</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 246, 242);</string>
+    </property>
+    <widget class="QWidget" name="verticalLayoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>0</y>
+       <width>261</width>
+       <height>411</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="File_VLayout"/>
+    </widget>
+   </widget>
+   <zorder>widget_4</zorder>
+   <zorder>widget_2</zorder>
+   <zorder>up_widget</zorder>
+   <zorder>gridLayoutWidget</zorder>
+   <zorder>scrollArea</zorder>
+   <zorder>widget</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
